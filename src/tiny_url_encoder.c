@@ -2,7 +2,7 @@
 // Created by Samuel Vishesh Paul on 01/11/24.
 //
 
-#include "tiny_url_encoder.h"
+#include <tiny_url_encoder.h>
 
 #include <ctype.h>
 #include <stdlib.h>

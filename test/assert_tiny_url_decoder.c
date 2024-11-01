@@ -3,7 +3,7 @@
 #include <assert.h>
 #include <string.h>
 
-#include "../src/tiny_url_decoder_lib.h"
+#include <tiny_url_decoder_lib.h>
 
 void test_url_decode() {
     const uint8_t src1[] = "hello%21";

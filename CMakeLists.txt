@@ -15,13 +15,15 @@ endif()
 include(CTest)
 enable_testing()
 
-add_library(tiny_url_encoder_lib src/tiny_url_encoder.c src/tiny_url_encoder.h)
+add_library(tiny_url_encoder_lib STATIC src/tiny_url_encoder.c src/tiny_url_encoder.h)
+target_include_directories(tiny_url_encoder_lib PUBLIC src)
 
 add_executable(assert_tiny_url_encoder test/assert_tiny_url_encoder.c)
 target_link_libraries(assert_tiny_url_encoder tiny_url_encoder_lib)
 add_test(test_tiny_url_encoder assert_tiny_url_encoder)
 
-add_library(tiny_url_decoder_lib src/tiny_url_decoder_lib.c src/tiny_url_decoder_lib.h)
+add_library(tiny_url_decoder_lib STATIC src/tiny_url_decoder_lib.c src/tiny_url_decoder_lib.h)
+target_include_directories(tiny_url_decoder_lib PUBLIC src)
 
 add_executable(assert_tiny_url_decoder test/assert_tiny_url_decoder.c)
 target_link_libraries(assert_tiny_url_decoder tiny_url_decoder_lib)

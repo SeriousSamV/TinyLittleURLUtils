@@ -3,7 +3,7 @@
 #include <assert.h>
 #include <string.h>
 
-#include "../src/tiny_url_encoder.h"
+#include <tiny_url_encoder.h>
 
 void test_url_encode() {
     // Test 1: Encode "hello!" (symbol !)
